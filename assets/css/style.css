@@ -26,6 +26,14 @@ a {
   text-decoration: none;
 }
 
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 /* btn */
 .btn {
   --height: 60px;
@@ -75,6 +83,7 @@ a {
 /* create logo */
 .logo {
   display: inline-flex;
+  font-family: "Sora", sans-serif;
   font-size: 1rem;
   position: relative;
 }
@@ -450,9 +459,11 @@ a {
   margin: 18px 0 38px;
 }
 
+/* member */
+
 .member {
-  margin-bottom: 85px;
-  padding-bottom: 85px;
+  margin: 85px 0;
+  padding: 85px 0;
 }
 
 .member .cta-btn {
@@ -468,7 +479,14 @@ a {
   display: flex;
   gap: 30px;
 }
-.member__item {
+
+.member__control {
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.member__item:hover .member__img {
+  transform: scale(1.1);
 }
 
 .member__item-bg {
@@ -483,6 +501,7 @@ a {
   object-fit: cover;
   max-width: 100%;
   height: 290px;
+  transition: 0.5;
 }
 
 .member__heading {
@@ -498,14 +517,14 @@ a {
   color: #575f66;
 }
 
-.member__control {
+.control {
   display: flex;
   align-self: center;
-  justify-content: center;
+  /* justify-content: center; */
+  /* margin: 38px 9px 0; */
 }
 
-.member__control-btn {
-  margin: 38px 9px 0;
+.control-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -517,9 +536,343 @@ a {
   border: 1px solid #575f66;
   transform: all ease 0.25s;
 }
-.member__control-btn:hover {
+
+.control-btn:last-child {
+  margin-left: 18px;
+}
+
+.control-btn:hover {
   background: #2e80ce;
   border-color: #2e80ce;
   cursor: pointer;
   color: #ffffff;
+}
+
+/* install  */
+.install {
+  padding: 85px 0;
+}
+
+.install__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  background: #2e80ce;
+  border-radius: 4px;
+}
+.install__img {
+  display: block;
+  width: 284px;
+  height: 522px;
+  margin-top: -95px;
+}
+
+.install__content {
+  max-width: 586px;
+}
+
+.install__heading,
+.install__desc {
+  color: #fff;
+}
+
+.install__heading {
+  max-width: 489px;
+}
+
+.install__desc {
+  font-weight: 300;
+  margin-top: 18px;
+  margin-bottom: 38px;
+  width: 586px;
+  font-size: 1.8rem;
+  line-height: 1.66;
+}
+
+.install__row,
+.install__btn {
+  display: flex;
+  padding: 0;
+  gap: 28px;
+}
+
+.install__btn {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.vacxin {
+  margin-top: 85px;
+}
+
+.vacxin__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vacxin__heading {
+  width: 470px;
+}
+
+.vacxin__left {
+  left: 0;
+}
+
+.vacxin__heading-read {
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 28px;
+  font-size: 1.8rem;
+  line-height: 1;
+  text-decoration-line: underline;
+  text-underline-offset: 4px;
+  color: #10375c;
+}
+
+.vacxin__right {
+  width: 49%;
+}
+
+.vacxin__control {
+  margin-top: 28px;
+}
+
+.vacxin__list {
+  display: flex;
+  gap: 30px;
+}
+
+.vacxin__item {
+  color: #10375c;
+  background: #ffffff;
+  border-radius: 12px;
+  justify-content: center;
+  width: 270px;
+  transition: 0.5s;
+}
+
+.vacxin__item:hover {
+  box-shadow: 0px 18px 50px rgba(0, 0, 0, 0.1);
+  transform: translateY(-19px);
+}
+
+.vacxin__info:hover {
+  border-color: #fff;
+}
+
+.vacxin__item:hover .vacxin__link {
+  color: #2e80ce;
+}
+
+/* .vacxin__item:hover .vacxin__img {
+  transform: scale(1.1);
+} */
+
+.vacxin__title {
+  width: 224px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.71;
+  color: #10375c;
+}
+
+.vacxin__desc {
+  width: 226px;
+  margin: 10px 0 12px 0;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.71;
+  color: #575f66;
+}
+
+.vacxin__link {
+  color: #10375c;
+}
+
+.vacxin__info {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e8ebee;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+}
+
+.vacxin__img {
+  width: 270px;
+  height: 172px;
+  border-radius: 12px 12px 0px 0px;
+  display: block;
+  transition: 0.5s;
+}
+
+.welcome {
+  margin: 170px 0;
+  background: #f7fbff;
+}
+
+.welcome__body {
+  padding: 100px 179px;
+  text-align: center;
+}
+
+.welcome__heading {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.welcome__heading::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0px;
+  bottom: 0;
+  margin: 0 auto;
+  width: 136px;
+  height: 2px;
+  background: #2e80ce;
+}
+
+.welcome__desc {
+  width: 617px;
+  padding-top: 18px;
+  padding-bottom: 38px;
+  margin: auto;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #575f66;
+}
+
+.footer {
+  padding-top: 100px;
+  background: #10375c;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer__row {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+  column-gap: 78px;
+}
+
+.footer__desc {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #a9b3bb;
+}
+
+.footer__heading {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #ffffff;
+}
+
+.footer__list {
+  margin-bottom: 28px;
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+  /* color: #fff; */
+}
+
+.footer__link {
+  font-weight: 400;
+  font-size: 1.4;
+  line-height: 1.85;
+  color: #a9b3bb;
+  white-space: nowrap; /* k bị bẻ chữ xuống hàng */
+}
+
+.footer__socials {
+  display: flex;
+  gap: 10px;
+}
+.footer__icon:hover {
+  background: #2e80ce;
+  color: #fff;
+}
+
+.footer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: #2e80ce;
+  transition: 0.5s;
+  margin-bottom: 28px;
+}
+
+.footer__form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer__form-input {
+  width: 212px;
+  height: 46px;
+  outline: none;
+  border: 1px solid #406181;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+  background: transparent;
+  margin-right: 12px;
+}
+
+input::placeholder {
+  font-size: 1.4rem;
+  line-height: 1.85;
+  color: #9ca8b1;
+}
+
+.footer__submit {
+  background: #2e80ce;
+  border-radius: 4px;
+  min-width: 108px;
+  height: 46px;
+  /* font-weight: 600; */
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #ffffff;
+}
+
+.footer__coppyright {
+  position: relative;
+}
+
+.footer__coppyright::after {
+  content: "";
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  display: block;
+  width: 1170px;
+  height: 1px;
+  background: #406181;
+}
+
+.footer__text {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  color: #aab3ba;
+  padding: 28px 0 42px 0;
 }
